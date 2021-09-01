@@ -1,0 +1,35 @@
+<form [formGroup]="signUpForm">
+    <table>
+        <tr>
+            <td>
+                <label>Username:</label>
+            </td>
+            <td>
+                <input name="username" type="text" formControlName="username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password:</label>
+            </td>
+            <td>
+                <input name="password" type="password" id="pass" formControlName="password" #pass>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Confirm Password:</label>
+            </td>
+            <td>
+                <input name="confirmPassword" type="password" formControlName="conPassword">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <button (click)="submitData()">Submit</button>
+                </p>
+            </td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,88 @@
+************ Creating an dotnet application *************
+//make a directory
+mkdir SocialChattingApp
+
+//get the information on dotnet versions installed in machine
+dotnet info
+
+//dotnet help for new commands
+dotnet -h
+
+//What We can do with the new command
+dotnet new -h
+
+//create a new solution
+dotnet new sln
+
+//list the directiories
+dir
+
+//create an api project inside an API folder
+dotnet new webapi -o API
+
+//add API project to the solution
+dotnet sln add API
+
+
+************** visual studio code *****************
+//run application
+dotnet run
+
+//watch any changes to the application when running the application
+dotnet watch run
+
+//stop running application
+control + c
+
+************** Trusted Certificate ****************
+//make the certificate trusted
+dotnet dev-certs https --trust
+
+*********Create Migrations with dotnet entityframework core using provider Sqlite**********
+dotnet ef migrations add InitialCreate -o Data/Migrations
+
+*********Update Database with entity framework core**********
+dotnet ef database update
+
+*********Drop Database with entity framework core***********
+dotnet ef database drop
+
+**********install angular***********
+npm install -g @angular/cli
+//To install specific version of angular
+npm install -g @angular/cli@10.1.0
+
+*******Downgrade package*********
+npm install <package-name>@<version-name>
+
+********Delete node_modules********
+Delete node modules and then use command "npm install"
+
+**********install bootstrap**********
+//This will make changes to angular.json package.json
+ng add ngx-bootstrap
+
+**********install font-awesome*******
+npm install font-awesome
+
+********** Create Component Angular *************
+//angular help for new commands
+cd src/app
+//Create a new component in angular(without test file)
+ng g c component-name --skip-tests
+//install toastr service for notification
+npm install ngx-toastr
+//install auth guard in angular
+ng g guard auth --skip-tests
+(press canActivate to activate route guard)
+//install bootswatch for free bootstrap theme
+npm install bootswatch
+//create interceptor in angular
+ng g interceptor interceptor-name --skip-tests
+//create a module in angular
+ng g m module_name --flat
+(--flat defines the module does not create under any folder)
+
+*********** Install (Component Development Kit)CDK in Angular ***********
+npm install @angular/cdk
+[Notice: To install ngx-spinner we need to install angular cdk]

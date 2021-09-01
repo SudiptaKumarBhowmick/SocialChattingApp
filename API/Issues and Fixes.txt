@@ -1,0 +1,10 @@
+*********Problem on running angular project***********
+"File C:\Users\HP\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is
+ disabled on this system."
+
+Fix- This could be due to the current user having an undefined execution policy.
+run this command - Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+******omnisharp is not running*******
+ctrl + shift + U ---> to see the omnisharp logs
+Then press F1 to restart omnisharp server.
