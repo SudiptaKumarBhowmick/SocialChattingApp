@@ -11,6 +11,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TimeagoClock, TimeagoModule } from 'ngx-timeago';
 import { MyClock } from '../_customs/myClocks';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [],
@@ -29,7 +30,8 @@ import { MyClock } from '../_customs/myClocks';
     ButtonsModule.forRoot(),
     TimeagoModule.forRoot({
       clock: {provide: TimeagoClock, useClass: MyClock}
-    })
+    }),
+    ModalModule.forRoot()
   ],
   exports: [
     BsDropdownModule,
@@ -41,7 +43,8 @@ import { MyClock } from '../_customs/myClocks';
     BsDatepickerModule,
     PaginationModule,
     ButtonsModule,
-    TimeagoModule
+    TimeagoModule,
+    ModalModule
   ]
 })
 export class SharedModule { }
