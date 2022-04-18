@@ -4,7 +4,10 @@
             No messages yet... say hi to {{username}}
         </div>
 
-        <ul *ngIf="(messageService.messageThread$ | async)?.length > 0" class="chat">
+        <ul #scrollMe
+        style="overflow: scroll; height: 500px;"
+        [scrollTop]="scrollMe.scrollHeight"
+        *ngIf="(messageService.messageThread$ | async)?.length > 0" class="chat">
             <li *ngFor="let message of (messageService.messageThread$ | async)">
                 <div>
                     <span class="chat-img float-right">
@@ -17,7 +20,7 @@
                                 <span class="text-danger" *ngIf="!message.dateRead && message.senderUsername !== username">
                                     (unread)
                                 </span>
-                                <span class="text-danger" *ngIf="message.dateRead && message.senderUsername !== username">
+                                <span class="text-success" *ngIf="message.dateRead && message.senderUsername !== username">
                                     (read {{message.dateRead | timeago}})
                                 </span>
                             </small>
