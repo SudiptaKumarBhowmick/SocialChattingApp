@@ -86,3 +86,15 @@ ng g m module_name --flat
 *********** Install (Component Development Kit)CDK in Angular ***********
 npm install @angular/cdk
 [Notice: To install ngx-spinner we need to install angular cdk]
+
+
+
+
+
+
+
+
+/************************************ Docker ************************************/
+docker container ls     -----or----- docker ps -a
+docker stop container_name
+docker rm container_name

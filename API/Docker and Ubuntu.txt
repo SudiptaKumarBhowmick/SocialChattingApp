@@ -1,0 +1,15 @@
+How To create container for postgres and connect to postgres database
+
+https://elanderson.net/2018/02/setup-postgresql-on-windows-with-docker/
+
+https://www.youtube.com/watch?v=3XLg74XQnzY
+
+How to install wsl with ubuntu (I downloaded the ubuntu from Microsoft Store, and do not followed the video instruction on ubuntu installation)
+
+https://www.youtube.com/watch?v=2ezNqqaSjq8
+
+https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+https://linuxhint.com/install_ubuntu_windows_10_wsl
+
+docker run -p 5432:5432 --name chatdevp -e POSTGRES_PASSWORD=123456 -d postgres
