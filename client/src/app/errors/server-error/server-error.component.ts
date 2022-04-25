@@ -14,6 +14,7 @@ export class ServerErrorComponent implements OnInit {
     if(navigation.extras.state.error != null || navigation.extras.state.error != undefined){
       this.error = navigation.extras.state.error;
       console.log(this.error);
+      console.log(this.error.details);
     }
 
    }
