@@ -41,16 +41,16 @@ namespace API.Extensions
 
                     // Parse connection URL to connection string for Npgsql
                     connUrl = connUrl.Replace("postgres://", string.Empty);
-                    var pgUserPass = connUrl.Split("@")[0];
-                    var pgHostPortDb = connUrl.Split("@")[1];
-                    var pgHostPort = pgHostPortDb.Split("/")[0];
-                    var pgDb = pgHostPortDb.Split("/")[1];
-                    var pgUser = pgUserPass.Split(":")[0];
-                    var pgPass = pgUserPass.Split(":")[1];
-                    var pgHost = pgHostPort.Split(":")[0];
-                    var pgPort = pgHostPort.Split(":")[1];
+                    var splitedConnUrlPart1 = connUrl.Split("@")[0];
+                    var splitedConnUrlPart2 = connUrl.Split("@")[1];
+                    
+                    var postgresUser = splitedConnUrlPart1.Split(":")[0];
+                    var postgresPassword = splitedConnUrlPart1.Split(":")[1];
+                    var postgresDbHost = splitedConnUrlPart2.Split(":")[0];
+                    var postgresDbPort = splitedConnUrlPart2.Split("/")[0].Split(":")[1];
+                    var postgresDbName = splitedConnUrlPart2.Split("/")[1];
 
-                    connStr = $"Server={pgHost};Port={pgPort};User Id={pgUser};Password={pgPass};Database={pgDb}";
+                    connStr = $"Server={postgresDbHost};Port={postgresDbPort};User Id={postgresUser};Password={postgresPassword};Database={postgresDbName}";
                 }
 
                 // Whether the connection string came from the local development configuration file
