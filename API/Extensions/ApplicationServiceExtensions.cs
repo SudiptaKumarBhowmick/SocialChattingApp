@@ -50,7 +50,7 @@ namespace API.Extensions
                     var postgresDbPort = splitedConnUrlPart2.Split('/')[0].Split(':')[1];
                     var postgresDbName = splitedConnUrlPart2.Split('/')[1];
 
-                    connStr = $"Server={postgresDbHost};Port={postgresDbPort};User Id={postgresUser};Password={postgresPassword};Database={postgresDbName}";
+                    connStr = $"Server={postgresDbHost};Port={postgresDbPort};User Id={postgresUser};Password={postgresPassword};Database={postgresDbName};SSL Mode=Prefer;Trust Server Certificate=True;";
                 }
 
                 // Whether the connection string came from the local development configuration file
